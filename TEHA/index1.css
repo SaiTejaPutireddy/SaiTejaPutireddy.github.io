@@ -1,0 +1,119 @@
+body{
+    margin: 0;
+    padding: 0 ;
+    background: #06031d;
+    border: 15px;
+    border-style: dotted;
+    border-color: white;
+}
+.bd{
+    margin-top: 80px;
+    text-align: center;
+    background: linear-gradient(180deg, #f80112 0%, #2f02f5 110%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    font-size: 180px;
+    font-family: bday1;
+}
+@font-face{
+    font-family: bday1;
+    src: url(bday1.ttf) format("truetype")
+}
+h2{
+    margin-top: 80px;
+    text-align: center;
+    background: linear-gradient(180deg, #f80112 0%, #2f02f5 110%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    font-size: 50px;
+    font-family: bday;
+    position: relative; 
+    animation-name: anime;
+    animation-duration: 10s;
+    animation-delay: 2s;
+    animation-iteration-count: 100;
+}
+@keyframes anime{
+    0%{left: 0px; top: 0px;}
+    25%{left: 30px; top: 0px;}
+    50%{left: 30px; top: 30px;}
+    75%{left: 0px; top: 30px;}
+    100%{left: 0px; top: 0px;}
+}
+.wrapper{
+    position: relative;
+    width:320px;
+    margin: 150px auto;
+    perspective: 1000px;
+    margin-bottom: 500px;
+}
+.image-area{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: rotateY(-360deg) translateZ(-300px);
+    animation: animate 25s steps(1000, end) infinite;
+}
+.single-img{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 10px;
+    left: 10px;
+}
+.single-img img{
+    width: 200px;
+    height: 150px;
+    border: 5px solid rgb(236, 235, 145) ;
+}
+.single-img.img-one{
+     transform: rotateY(0deg) translateZ(300px);
+}
+.single-img.img-two{
+    transform: rotateY(40deg) translateZ(300px);
+    }
+.single-img.img-three{
+    transform: rotateY(800deg) translateZ(300px);
+        }
+.single-img.img-four{
+    transform: rotateY(120deg) translateZ(300px);
+            }
+.single-img.img-five{
+    transform: rotateY(160deg) translateZ(300px);
+                }
+.single-img.img-six{
+    transform: rotateY(200deg) translateZ(300px);
+                    }
+                    .single-img.img-seven{
+                        transform: rotateY(240deg) translateZ(300px);
+                                }
+                    .single-img.img-eight{
+                        transform: rotateY(280deg) translateZ(300px);
+                                    }
+                    .single-img.img-nine{
+                        transform: rotateY(320deg) translateZ(300px);
+                                        }
+img{
+    filter: grayscale(90%);
+    transition: 1s;
+    cursor: pointer;
+}
+img:hover{
+    transition: 1s;
+    filter: grayscale(0);
+}
+@keyframes animate{
+    from{
+        transform: rotateY(-360deg);
+    }
+    to{
+        transform: rotateY(0deg);
+    }
+}
+@font-face{
+    font-family: bday;
+    src: url(bday.ttf) format("truetype")
+}
